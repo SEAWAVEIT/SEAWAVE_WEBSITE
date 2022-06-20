@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Seawave Forwarding & Logistics</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="./images/circle-logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<script>
+
+var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?24503';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"",
+      "borderRadius":"25",
+      "marginLeft":"50",
+      "marginBottom":"15",
+      "marginRight":"50",
+      "position":"left"
+  },
+  "brandSetting":{
+      "brandName":"Seawave Forwarding & Logistics",
+      "brandSubTitle":"Typically replies within a day",
+      "brandImg":"../../images/circle-logo.png",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"919136571955"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+
+</script>
+<body>
+  <script>
+
+window.onload = function () {
+  var heroBackground = document.getElementById("hero");
+  var backgroundImg=["./images/background-images/truck.webp",
+                      "./images/background-images/seafreight.webp",
+                      "./images/background-images/airfreight.webp",
+                      // "./images/background-images/truck-image.jpeg"
+                    ]
+  var phonebackgroundImg=["./images/background-images/airphone2.webp",
+                          "./images/background-images/phoneship1.webp",
+                          "./images/background-images/truckphone3.webp",
+                          // "./images/background-images/truck-image.jpeg"
+                          ]
+  
+    setInterval(changeImage, 2500);
+   function changeImage() {   
+    var i = Math.floor((Math.random() * 3));
+
+    if (x.matches) { // If media query matches
+    heroBackground.style.backgroundImage = "url('"+phonebackgroundImg[i]+"')";
+    heroBackground.style.backgroundSize = "cover";
+    heroBackground.style.backgroundRepeat = "no-repeat";
+    heroBackground.style.transition = "0.5s";
+  } else {
+    heroBackground.style.backgroundImage = "url('"+backgroundImg[i]+"')";
+    heroBackground.style.backgroundSize = "cover";
+    heroBackground.style.backgroundRepeat = "no-repeat";
+    heroBackground.style.transition = "0.5s";
+  }
+  }
+  var x = window.matchMedia("(max-width: 700px)")
+  changeImage(x) // Call listener function at run time
+  x.addListener(changeImage) // Attach listener function on state changes
+
+}
+  </script>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero"> 
+    <div class="hero-container">
+      <img src="./images/seawave.png" class="seawave-logo">
+      <h1>Welcome to Seawave</h1>
+      <h3><span style="color: #3AB4C3;">THE WAVES ARE</span> <span style="color: #9A4278; ">ALWAYS HIGH</span></h3>
+      <!-- <h5 style="color: white;">We provide fastest & affordable cargo services</h5> -->
+      <h5 style="color: white;">Providing fast & affordable cargo services SINCE 2005</h5>
+      <div class="two-buttons">
+        <a href="#about" class="btn-get-started scrollto">Get A Free Quote</a>
+        <a target="_blank" href="./Others/SeawaveBrochure.pdf" class="btn-get-started scrollto see-brochure">See Brochure</a>
+      </div>
+      
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="./images/seawave.png"></a></h1>
+      
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li class="dropdown services-hidden"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down down-arrow"></i><i class="bi bi-chevron-up up-arrow"></i></a>
+            <ul>
+              <li><a href="./custom-clearance.html">Custom Clearance</a></li>
+              <li><a href="./freight-forwarding.html">Freight Forwarding</a></li>
+              <li><a href="./land-freight.html">Land Freight</a></li>
+              <li><a href="./warehousing.html">Warehousing</a></li>
+              <li><a href="./exim-consultancy.html">Exim Consultancy</a></li>
+              <li><a href="./logistics-design.html">Logistics Design</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down down-arrow"></i><i class="bi bi-chevron-up up-arrow"></i></a>
+            <ul>
+              <li><a href="./custom-clearance.html">Custom Clearance</a></li>
+              <li class="dropdown dropdown1"><a href="./freight-forwarding.html"><span>Freight Forwarding</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+
+                  <li><a href="./freight-forwarding.html#airfreight">Air Freight </a></li>
+                  <li><a href="./freight-forwarding.html#seafreight">Sea Freight </a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown dropdown1"><a href="./land-freight.html"><span>Land Freight</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+
+                  <li><a href="./land-freight.html#transportation">Transportation </a></li>
+                  <li><a href="./land-freight.html#vehicleoperation">Vehicle Operation </a></li>
+
+                </ul>
+              </li>
+              <li><a href="./warehousing.html">Warehousing</a></li>
+              <li><a href="./exim-consultancy.html">Exim Consultancy</a></li>
+              <li><a href="./logistics-design.html">Logistics Design</a></li>
+
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" href="#specialization">Specialization</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+
+        </ul>
+        
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex align-items-center">
+        <a href="https://www.facebook.com/seawavelogistics" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/seawave2102/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#about" class="btn-get-started scrollto">Get A Free Quote</a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              <span style="color: #9A4278; font-weight: bolder; font-family: 'Quattrocento', serif;">SEAWAVE FORWARDING AND LOGISTICS PVT LTD</span> is a well established organization providing services as Custom Clearance, Freight Forwarding, Transportation, Warehousing, Exim Consultancy & Logistics Design.<br> <br>Our company has a well organized, advance system and infrastructure to provide complete solutions to our clients under one roof.<br><br>Our world-class service is built on intensive knowledge of these sectors and is delivered through specialist teams based in our network of dedicated Centres of Expertise at key locations around the world. 
+            </p>
+            <a href="./about-us.html" class="btn-learn-more">Read More</a>
+            
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h4>
+              Our Values
+            </h4>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Integrity</li>
+              <li><i class="ri-check-double-line"></i> Transparency</li>
+              <li><i class="ri-check-double-line"></i> Respect</li>
+              <li><i class="ri-check-double-line"></i> Customer Centrality</li>
+              <li><i class="ri-check-double-line"></i> Excellence</li>
+              <li><i class="ri-check-double-line"></i> Social and Environmental Responsibility</li>
+            </ul>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-4 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="8000" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-4 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
+            <p>No. of Employees</p>
+          </div>
+
+          <div class="col-lg-4 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="8000" data-purecounter-duration="1" class="purecounter"></span>
+            <p>No. of Projects</p>
+          </div>
+
+          <!-- <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div> -->
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Our Values Section ======= -->
+    <section id="our-values" class="our-values">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-body">
+                <!-- <img src="./images/road.png" style="width: 45%;"> -->
+                <h5 class="card-title"><a href="">Our Mission</a></h5>
+                <p class="card-text">A commitment to find the best solution for the individual needs of each client, or as we like to think, each business partner.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="card">
+              <div class="card-body">
+                <!-- <img src="./images/airplane.png" style="width: 45%;"> -->
+                <h5 class="card-title"><a href="">Our Vision</a></h5>
+                <p class="card-text">We aspire to fullfil our dream of providing quality services to our valued clients through logistics, design & solutions.</p>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="card">
+              <div class="card-body">
+                <!-- <img src="./images/ship.png" style="width: 45%;"> -->
+                <h5 class="card-title"><a href="">Our Purpose</a></h5>
+                <p class="card-text">Committed to provide a holistic solution to our clients, we are always ready to meet our clients requirements efficiently.
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Our Values Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <!-- <p>Our Core of Interest is to work on the solutions of the customers</p> -->
+          <p>OUR COMMITMENT IS TO FIND THE BEST SOLUTION FOR OUR CLIENTS</p>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="./custom-clearance.html">Custom Clearance</a></h4>
+              <p class="description">We are masters in custom clearance of general and project cargo.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-truck" style="color: #e9bf06;"></i></div>
+              <h4 class="title"><a href="./freight-forwarding.html">Freight Forwarding</a></h4>
+              <p class="description">It consists of strategic logistics planning and execution for the international movement of goods, on behalf of shippers. </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="./land-freight.html">Land Freight</a></h4>
+              <p class="description">Land Transport, Delivery, Distribution,<br> Carrier</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="./warehousing.html">Warehousing</a></h4>
+              <p class="description">Godown, Stock Room, Storage</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
+              <h4 class="title"><a href="./exim-consultancy.html">Exim Consultancy</a></h4>
+              <p class="description">Consultancy related to Law, Act, Provisions, Circulars, Notifications, etc</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="./logistics-design.html">Logistics Design</a></h4>
+              <p class="description">Logistics cost directly relates to time, mode of transportation, route of transport, and selection of carriers for export and import.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+<!-- ======= Specialization Section ======= -->
+<section id="specialization" class="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Specialization</h2>
+      <p>AREAS THAT WE SPECIALIZE IN TO PROVIDE HOLISTIC SOLUTION TO OUR CLIENTS</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+          <h4 class="title">SVB</h4>
+          <p class="description">In the Indian customs system, the Special Valuation Branch (SVB) investigates the valuation of goods when they are imported between related parties.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-truck" style="color: #e9bf06;"></i></div>
+          <h4 class="title">Capital Goods Clearance</h4>
+          <p class="description">We do New/2nd Hand Captial Goods Clearance</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i></div>
+          <h4 class="title">Proper Cargo Handling</h4>
+          <p class="description">Equipment used at seaports and rail yards to lift or move containerized, bulk or break-bulk cargo is considered cargo handling equipment.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+          <h4 class="title">Nepal & Bangladesh Border Clearance</h4>
+          <p class="description">
+            In order to facilitate exports and imports, transportation, and warehousing between neighboring countries, Seawave has branches in Nepal and Bangladesh. Door-to-door services are provided between India and its neighbors.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-brightness-high" style="color: #d6ff22;"></i></div>
+          <h4 class="title">AEO Application</h4>
+          <p class="description">In accordance with our customers' needs, we offer registered AEO applications</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-calendar4-week" style="color: #4680ff;"></i></div>
+          <h4 class="title">DPD Handling</h4>
+          <p class="description">In this system, importers can clear their cargo directly from the port within 48 hours of arrival.</p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 mt-4">
+
+      </div>
+      <div class="col-lg-8 col-md-6 mt-4">
+        <div class="icon-box">
+          <div class="icon"><i class="bi bi-house-door" style="color: #4680ff;"></i></div>
+          <h4 class="title">Palletization</h4>
+          <p class="description">  A palletization process consists of placing goods onto a pallet for easier handling and transportation, allowing the load to be consolidated.</p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 mt-4">
+        
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Specialization Section -->
+
+
+     <!-- ======= Clients Section ======= -->
+     <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="section-title mt-4">
+          <h2>Trusted Partners</h2>
+          <p>WE AIM TO PROVIDE QUALITY SERVICES WHICH HAS LED TO PARTNER OURSELVES WITH THE LEADING INDUSTRY LEADERS</p>
+        </div>
+
+        <div class="row"> 
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/1.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/2.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/3.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/4.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/5.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/6.webp" class="img-fluid" alt="">
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/7.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/8.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/9.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/10.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/11.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/12.webp" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/13.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/14.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/15.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/16.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/17.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/18.webp" class="img-fluid" alt="">
+          </div>
+
+        </div>
+        <script src="./assets/js/read-more.js"></script>
+        <span id="dots"></span>
+        <div onclick="myFunction()" id="myBtn" class="see-more-button">See more</div>
+        <span id="more" style="display: none;">
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/19.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/20.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/21.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/22.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/23.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/24.webp" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/25.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/26.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/27.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/28.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/29.webp" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="./images/partner-logo/30.webp" class="img-fluid" alt="">
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/31.webp" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/32.webp" class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/33.webp" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/34.webp" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/35.webp" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <img src="./images/partner-logo/36.webp" class="img-fluid" alt="">
+            </div>
+        </div>
+      </span>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Message From Our Founders</h2>
+          <p>INSPIRATIONAL MESSAGE BY THE PEOPLE WHO PUT FORWARD THE STEPPING STONE OF SEAWAVE FORWARDING AND LOGISTICS PVT. LTD.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quote of Nandkumar Mishra
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./images/message-from-founders/1.webp" class="testimonial-img" alt="">
+                <h3>Late Shri Nandkumar Mishra</h3>
+                <h4>Chairman</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quote of Rajanikant Mishra
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./images/message-from-founders/2.webp" class="testimonial-img" alt="">
+                <h3>Late Shri Rajanikant Nandkumar Mishra</h3>
+                <h4>Director</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Successful Entrepreneurs are Givers and not Takers of Positive Energy
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./images/message-from-founders/3.webp" class="testimonial-img" alt="">
+                <h3>Er. Nalinikant Nandkumar Mishra</h3>
+                <h4>Founder & Managing Director</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quote of Sanyukta Mishra
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./images/message-from-founders/4.webp" class="testimonial-img" alt="">
+                <h3>Sanyukta Mishra</h3>
+                <h4>Director</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>GET YOUR ANSWERS TO THE QUESTIONS WHICH ARE COMMONLY ASKED BY OUR CLIENTS</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How does SEAWAVE deals with Trade Challenges? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Seawave solves the basic challenges for trade in import and export by getting a vendor who can meet the technical & logistics aspects also complying for import and export, design complete logistics and set SOP for execution of work as per the customers requirement.
+                </p>
+              </div>
+            </li>
+
+            <!-- <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What is the most important thing in warehouse management?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The essential factor in warehouse management is the safety rules. Warehouses with safety as a priority would include wearing appropriate PPE as well as paying attention to warning signs and signals. Such a warehouse Management System provides consistency, efficiency, and quality control to the warehouse process, which helps improves every stage of the fulfillment process
+                </p>
+              </div>
+            </li> -->
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How does SEAWAVE handle a specific case? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  A client of ours, M/s Everest Kanto Cylinder Ltd., had to establish a plant in Gujarat in 2008. As the plant was being imported from the USA, Seawave provided all logistical support, managed cost analyses relating to custom provisions, and tagged the material to enable it to be identified. Teamwork and proper management allowed Seawave to achieve its objectives.
+The plant was successfully relocated from the United States to Gandhi Dham Gujarat, India.
+                </p>
+              </div>
+            </li>
+
+            <!-- <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li> -->
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>DID NOT FIND THE ANSWER YOU WERE LOOKING FOR? LET US HELP YOU FIND ANSWERS TO YOUR QUESTIONS</p>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <a target="_blank" href="https://www.google.com/maps/place/Seawave+Forwarding+%26+Logistics+Pvt.+Ltd/@19.0528086,73.0241597,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c253393efebf:0x921b215ed23b73c2!8m2!3d19.0528086!4d73.0263484"><div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Raheja District II Edison (Building No.1), Unit No. 232, Second Floor Plot No. GEN-1/2/C Part, D-Block, TTC Industrial Area, Juinagar, Navi Mumbai, Maharashtra 400705</p>
+              </div></a>
+
+              <a target="_blank" href="mailto:info@seawave.in"><div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@seawave.in</p>
+              </div></a>
+
+              <a target="_blank" href="https://api.whatsapp.com/send?phone=919136571955"><div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call or Whatsapp:</h4>
+                <p>+91-9136571955</p>
+              </div></a>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.248504728752!2d73.0241597149008!3d19.052808587101286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c253393efebf%3A0x921b215ed23b73c2!2sSeawave%20Forwarding%20%26%20Logistics%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1654720182953!5m2!1sen!2sin" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-12">
+            <img src="./images/seawave-logo1.png" class="seawave-logo-footer">
+            <p>SEAWAVE COVERS SEA, EARTH & AIR THROUGH LOGISTICS SOLUTION TO ACHIEVE OUR VISION FLAWLESSLY.</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SEAWAVE</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Developed by <a href="">&nbsp SEAWAVE</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
