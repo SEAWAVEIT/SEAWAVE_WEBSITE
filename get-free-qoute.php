@@ -106,8 +106,7 @@
     </section>
 
     <section id="getfreeqoute" class="contact">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8 mt-5 mt-lg-0">
+      <div class="col-lg-12 mt-5 mt-lg-0 p-4">
 
         <form method="POST" role="form" class="php-email-form">
           <div class="row">
@@ -158,12 +157,12 @@ require('PHPMailer/SMTP.php');
   try {
     //Server settings
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = "";                     //SMTP username
     $mail->Password   = "";                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('hemangranjan417@gmail.com', 'Seawave Forwarding & Logistics');
