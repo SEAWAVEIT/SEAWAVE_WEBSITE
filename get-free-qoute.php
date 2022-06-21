@@ -108,7 +108,7 @@
     <section id="getfreeqoute" class="contact">
       <div class="col-lg-12 mt-5 mt-lg-0 p-4">
 
-        <form method="POST" role="form" class="php-email-form">
+        <form action="./sendEmail.php" method="POST" role="form" class="php-email-form" name="Login">
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -136,54 +136,6 @@
 
   </main><!-- End #main -->
 
-  <?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-require('PHPMailer/Exception.php');
-require('PHPMailer/PHPMailer.php');
-require('PHPMailer/SMTP.php');
-
-  if (isset($_POST['Login'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-  $mail = new PHPMailer(true);
-
-
-  try {
-    //Server settings
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp-mail.outlook.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = "";                     //SMTP username
-    $mail->Password   = "";                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('hemangranjan417@gmail.com', 'Seawave Forwarding & Logistics');
-    $mail->addAddress('hemangranjan417@gmail.com', 'Joe User');     //Add a recipient
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Get a Free Quote';
-    $mail->Body    = "Name: $name<br> Email: $email<br> Message: $message";
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-    $mail->send();
-
-    echo "<script>alert('Message has been sent')</script>";
-    } catch (Exception $e) {
-    echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
-    }
-
-  }
-
-  ?>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
