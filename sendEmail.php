@@ -40,7 +40,7 @@ require('PHPMailer/SMTP.php');
 
 
     $mail->setFrom('sales@seawave.in', 'Seawave Forwarding & Logistics');
-    $mail->addAddress('hemangranjan417@gmail.com');     
+    $mail->addAddress('sales@seawave.in');     
 
 
     $mail->isHTML(true);                                 
