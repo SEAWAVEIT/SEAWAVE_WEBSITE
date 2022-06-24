@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "refresh" content = "5; url = ./index.html" />
     <title>Thank you for contacting us</title>
     <link rel="stylesheet" href="./assets/css/thank-you.css">
     <link href="./images/circle-logo.png" rel="icon">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
 </head>
-<body>
+<script src="node_modules/confetti-js/dist/index.min.js"></script>
+<script src="./assets/js/confetti.js"></script>
+<body onload="startConfetti();">
     <div class="container">
-        <img src="https://cliply.co/wp-content/uploads/2021/03/372103860_CHECK_MARK_400px.gif" style="width: 100px;">
+        <img src="./images/black-logo.png" style="width: 400px;">
         <h2><p>Thank you for contacting us!</h2>
-        <a href="./index.html" class="return-button"><i class="bi bi-arrow-left arrow-left">Return to Homepage</i> <span class="hide">Return to Homepage</span></a>
+        <a href="./index.html" class="return-button"><i class="bi bi-arrow-left arrow-left">Return to Homepage</i></a>
+        <p>You will be redirected to homepage in 5 seconds</p>
      </div>
 </body>
+
 </html>
