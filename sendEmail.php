@@ -40,7 +40,7 @@ require('PHPMailer/SMTP.php');
 
 
     $mail->setFrom('sales@seawave.in', 'Seawave Forwarding & Logistics');
-    $mail->addAddress('sales@seawave.in');     
+    $mail->addAddress('hemangranjan417@gmail.com');     
 
 
     $mail->isHTML(true);                                 
@@ -49,9 +49,9 @@ require('PHPMailer/SMTP.php');
 
     $mail->send();
 
-    echo "<script>alert('Message has been sent')</script>";
+    echo "<script>window.location.href='thank-you.html'</script>";
     } catch (Exception $e) {
-    echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
+    echo "<script>window.location.href='404.html'</>";
     }
 
   }
