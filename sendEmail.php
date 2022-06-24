@@ -24,13 +24,6 @@ require('PHPMailer/SMTP.php');
         $chk .= $chk1.",";  
       } 
 
-    // if(!empty($_POST['servicescheckbox'])) {
-    // $checkbox = $_POST['servicescheckbox'];
-    //   foreach($_POST['servicescheckbox'] as $check) {
-    //           $selectedcheck = $check + ' '
-    //   }
-    // }
-
   $mail = new PHPMailer(true);
 
 
