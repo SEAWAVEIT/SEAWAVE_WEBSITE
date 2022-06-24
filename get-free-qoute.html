@@ -108,20 +108,67 @@
     <section id="getfreeqoute" class="contact">
       <div class="col-lg-12 mt-5 mt-lg-0 p-4">
 
-        <form action="./sendEmail.php" method="POST" role="form" class="php-email-form" name="Login">
+        <form action="./sendEmail.php" method="POST" role="form" class="php-email-form" name="mail">
           <div class="row">
+            <!-- Your Name -->
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
+            <!-- Your Email -->
             <div class="col-md-6 form-group mt-3 mt-md-0">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
             </div>
+            
           </div>
-          <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          <div class="row mt-3">
+            <!-- Company Name -->
+            <div class="col-md-6 form-group">
+              <input type="text" name="companyname" class="form-control" id="companyname" placeholder="Company Name" required>
+            </div>
+            <!-- Phone Number -->
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Contact Number" required>
+            </div>
           </div>
+          <!-- Company Address -->
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <input type="text" class="form-control" name="companyaddress" id="companyaddress" placeholder="Company Address" required>
+          </div>
+          <!-- Services -->
+          <div class="checkbox-services">
+            <h4>Services:</h4>
+          <div class="row">
+            <label class="checkbox-container col-lg-4">Custom Clearance
+              <input type="checkbox" name="servicescheckbox[]" value="Custom Clearance">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container col-lg-4">Freight Forwarding
+              <input type="checkbox" name="servicescheckbox[]" value="Freight Forwarding">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container col-lg-4">Land Freight
+              <input type="checkbox" name="servicescheckbox[]" value="Land Freight">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="row">
+            <label class="checkbox-container col-lg-4">Warehousing
+              <input type="checkbox" name="servicescheckbox[]" value="Warehousing">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container col-lg-4">Exim Consultancy
+              <input type="checkbox" name="servicescheckbox[]" value="Exim Consultancy">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox-container col-lg-4">Logistics Design
+              <input type="checkbox" name="servicescheckbox[]" value="Logistics Design">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+          <!-- Comments/Remarks -->
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Comments/Remarks" required></textarea>
           </div>
           <div class="my-3">
             <div class="loading">Loading</div>

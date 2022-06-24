@@ -9,10 +9,27 @@ require('PHPMailer/Exception.php');
 require('PHPMailer/PHPMailer.php');
 require('PHPMailer/SMTP.php');
 
+
   if (isset($_POST)){
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $companyname = $_POST['companyname'];
+    $phone = $_POST['phone'];
+    $companyaddress = $_POST['companyaddress'];
+    $checkbox = $_POST['servicescheckbox'];
     $message = $_POST['message'];
+    $chk="";  
+    foreach($checkbox as $chk1)  
+      {  
+        $chk .= $chk1.",";  
+      } 
+
+    // if(!empty($_POST['servicescheckbox'])) {
+    // $checkbox = $_POST['servicescheckbox'];
+    //   foreach($_POST['servicescheckbox'] as $check) {
+    //           $selectedcheck = $check + ' '
+    //   }
+    // }
 
   $mail = new PHPMailer(true);
 
@@ -35,7 +52,7 @@ require('PHPMailer/SMTP.php');
 
     $mail->isHTML(true);                                 
     $mail->Subject = 'Get a Free Quote';
-    $mail->Body    = "Name: $name<br> Email: $email<br> Message: $message";
+    $mail->Body    = "Name: $name<br> Email: $email<br> Company Name: $companyname<br>Phone: $phone<br>Company Address : $companyaddress<br>Services: $chk<br>Message: $message";
 
     $mail->send();
 
