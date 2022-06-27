@@ -49,7 +49,7 @@ require('PHPMailer/SMTP.php');
 
     $mail->send();
 
-    echo "<script>window.location.href='thank-you.html'</script>";
+    echo "<script>window.location.href='./thank-you.html'</script>";
     } catch (Exception $e) {
     echo "<script>window.location.href='404.html'</>";
     }
