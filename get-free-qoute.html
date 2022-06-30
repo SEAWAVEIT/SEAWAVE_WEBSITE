@@ -30,6 +30,44 @@
   <link href="./assets/css/get-free-qoute.css" rel="stylesheet">
 
 </head>
+<script>
+
+  var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?24503';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url;
+      var options = {
+    "enabled":true,
+    "chatButtonSetting":{
+        "backgroundColor":"#4dc247",
+        "ctaText":"Chat With Us",
+        "borderRadius":"25",
+        "marginLeft":"50",
+        "marginBottom":"15",
+        "marginRight":"50",
+        "position":"left"
+    },
+    "brandSetting":{
+        "brandName":"Seawave Forwarding & Logistics",
+        "brandSubTitle":"Typically replies within a day",
+        "brandImg":"../../images/circle-logo.webp",
+        "welcomeText":"Hi there!\nHow can I help you?",
+        "messageText":"Hello, I have a query about {{page_link}}",
+        "backgroundColor":"#0a5f54",
+        "ctaText":"Start Chat",
+        "borderRadius":"25",
+        "autoShow":false,
+        "phoneNumber":"919136571955"
+    }
+  };
+      s.onload = function() {
+          CreateWhatsappChatWidget(options);
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+  
+  </script>
 
 <body>
 
@@ -88,9 +126,9 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex align-items-center">
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
         <a href="#getfreeqoute" class="btn-get-started scrollto">Get A Free Quote</a>
 
       </div>
