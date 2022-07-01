@@ -29,14 +29,14 @@ require('PHPMailer/SMTP.php');
 
   try {
 
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                     
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                     
     $mail->isSMTP();                                            
-    $mail->Host       = 'smtp.office365.com';                     
+    $mail->Host       = 'smtp3.netcore.co.in';                     
     $mail->SMTPAuth   = true;                                  
     $mail->Username   = 'sales@seawave.in';                     
     $mail->Password   = '@Cloudm@il2#';                               
     $mail->SMTPSecure = 'tls';            
-    $mail->Port       = 587;                                     
+    $mail->Port       = 587;                                    
 
 
     $mail->setFrom('sales@seawave.in', 'Seawave Forwarding & Logistics');
