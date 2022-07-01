@@ -6,6 +6,26 @@ body {
   /* background-color: #000; */
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3AB4C3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9A4278;
+}
+
 a {
   color: #ff7f5d;
   text-decoration: none;
